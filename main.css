@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(40, 40, 45);
+    font-family: sans-serif;
+}
+
+#root {
+    height: 100vh;
+    gap: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    background-color: #34353b;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.475);
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.work {
+    height: 40px;
+    width: 50px;
+    border-radius: 20px;
+    opacity: 20%;
+    background-color: rgb(255, 36, 94);
+
+    transition: background-color .2s, box-shadow .2s;
+}
+
+.work--active {
+    opacity: 100%;
+    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.445); */
+    box-shadow: 0 0px 20px rgb(255, 36, 94);
+}
+
+.small-break {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    opacity: 20%;
+    background-color: rgb(42, 234, 255);
+
+    transition: background-color .2s, box-shadow .2s;
+}
+
+.big-break {
+    height: 20px;
+    width: 100px;
+    opacity: 20%;
+    background-color: rgb(42, 234, 255);
+    border-radius: 20px;
+    
+    transition: background-color .2s, box-shadow .2s;
+}
+
+.break--active {
+    opacity: 100%;
+    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.374); */
+    box-shadow: 0 0px 20px rgb(42, 234, 255);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px
+}
+
+.button {
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+    background-color: #34353b;;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.242);
+
+    transition: box-shadow .2s, background-color .2s;
+}
+
+.start-button:hover {
+    cursor: pointer;
+    background-color: #ff245e;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.384);
+}
+
+.restart-button {
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    cursor: pointer;
+    background-color: #ff245e;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.384);
+}
+
+.restart-button--active {
+    background-color: rgb(42, 234, 255);
+}
+
+.by {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(156, 180, 238);
+    opacity: .5;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 700px) {
+    #root {
+        width: 100vw;
+    }
+    .dots {
+        position: fixed;
+        top: 20px;
+        width: 100%;
+        padding: 0 3%;
+    }
+    .work {
+        width: 15%;
+    }
+    .small-break {
+        width: 7% ;
+    }
+
+    .start-button:hover {
+        background-color: #34353b;
+    }
+    
+}
